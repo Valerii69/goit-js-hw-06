@@ -3,8 +3,9 @@
 // Оновлюй інтерфейс новим значенням змінної counterValue.
 let counterValue = 0;
 const valueEl = document.querySelector("#value");
-const decrementBtn = document.querySelector('[data-action="decrement"]');
-const incrementBtn = document.querySelector('[data-action="increment"]');
+
+const decrementBtn = document.querySelector("#decrement");
+const incrementBtn = document.querySelector("#increment");
 
 decrementBtn.addEventListener("click", () => {
   counterValue -= 1;
@@ -19,3 +20,10 @@ incrementBtn.addEventListener("click", () => {
   valueEl.textContent = counterValue;
   console.log(counterValue);
 });
+
+function traverseTree(node) {
+  if (node === null) return;
+  console.log(node.value);
+  traverseTree(node.left); // Рекурсія для лівого піддерева
+  traverseTree(node.right); // Рекурсія для правого піддерева
+}

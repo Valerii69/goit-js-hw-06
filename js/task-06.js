@@ -8,6 +8,7 @@ const input = document.getElementById("validation-input");
 input.addEventListener("blur", () => {
   const expectedLength = Number(input.getAttribute("data-length"));
   const actualLength = input.value.length;
+
   console.dir(actualLength)
   console.dir(expectedLength)
 
